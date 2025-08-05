@@ -1,7 +1,13 @@
 ---
 import GitHub from "./icons/GitHub.astro"
 import NextJS from "./icons/NextJS.astro"
+import PHP from "./icons/PHP.astro"
 import Tailwind from "./icons/Tailwind.astro"
+import Mongo from "./icons/Mongo.astro"
+import Express from "./icons/Express.astro"
+import Node from "./icons/Node.astro"
+import BOOTSTRAP from "./icons/Bootstrap.astro"
+import JQuery from "./icons/JQuery.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
@@ -16,24 +22,54 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  PHP: {
+    name: "PHP",
+    class: "bg-black text-white",
+    icon: PHP,
+  },
+  JQUERY: {
+    name: "JQuery",
+    class: "bg-[#003159] text-white",
+    icon: JQuery,
+  },
+  BOOTSTRAP: {
+    name: "BootStrap 5",
+    class: "bg-black text-white",
+    icon: BOOTSTRAP,
+  },
+  EXPRESS: {
+    name: "Express",
+    class: "bg-black text-white",
+    icon: Node,
+  },
+  MONGO: {
+    name: "MongoDB",
+    class: "bg-black text-white",
+    icon: Mongo,
+  },
+  NODEJS: {
+    name: "Node.js",
+    class: "bg-black text-white",
+    icon: Node,
+  }
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "SportKing – Website bán đồ thể thao trực tuyến",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Dẫn dắt nhóm 4 người phát triển web bán đồ thể thao bằng PHP thuần. Phụ trách quản lý sản phẩm, người dùng, thiết kế giao diện với Figma và xây dựng dashboard quản trị. Quản lý Git, review code và phối hợp nhóm.",
+    link: "https://sportking.vanduie.io.vn/sportking/public/?controller=home",
+    github: "https://github.com/minhhquann1508/sportking",
+    image: "/projects/sportking.png",
+    tags: [TAGS.PHP,TAGS.JQUERY,TAGS.BOOTSTRAP, TAGS.TAILWIND],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Mobile Phone Store Backend – Hệ thống quản lý bán điện thoại",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    "Xây dựng backend web bán điện thoại bằng Node.js, Express và MongoDB. Triển khai API cho quản lý sản phẩm, người dùng (JWT), giỏ hàng, đơn hàng và admin. Thiết kế dữ liệu cho sản phẩm, danh mục, người dùng và đánh giá.",
+    link: "https://github.com/minhhquann1508/mobile-store-server",
+    image: "https://blog.postman.com/wp-content/uploads/2023/05/23PST0060-How-To-Create-a-REST-API-with-Node-js-and-Express-v1.jpg",
+    tags: [TAGS.EXPRESS, TAGS.NODEJS, TAGS.MONGO],
   },
 ]
 ---
@@ -78,7 +114,7 @@ const PROJECTS = [
           {link && (
             <LinkButton href={link}>
               <Link class="size-4" />
-              Preview
+              Xem dự án
             </LinkButton>
           )}
         </footer>
